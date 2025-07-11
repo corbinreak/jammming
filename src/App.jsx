@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react';
+import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
+import Playlist from './components/Playlist';
 import './App.css'
 
 function App() {
 
-  function SearchBar() {
-    return <div>Search Bar Here</div>; //mock function to take place and define SearchBar.
-  }
+  
 
    return (
     <div>
       <h1>Jammming</h1>
       <SearchBar />
+      <SearchResults />
+      <Playlist />
     </div>
   );
 }
