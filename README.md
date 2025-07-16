@@ -1,12 +1,80 @@
-# React + Vite
+# Jammming
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jammming is a React-based web app that lets users search for songs, build a custom playlist, and (eventually) save it to their Spotify account.
 
-Currently, two official plugins are available:
+A personal playlist builder for music lovers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Search for songs by **title**, **artist**, or **album**
+- View song details (name, artist, album)
+- Add tracks to a custom playlist
+- Remove tracks from the playlist
+- Name your playlist
+- (Future) Export playlist to your Spotify account
+
+---
+
+## Technologies Used
+
+- React (functional components with hooks)
+- JavaScript (ES6)
+- CSS (inline and external styles)
+- Flexbox layout
+- (Optional) Spotify Web API
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/jammming.git
+cd jammming
+npm install
+npm run dev
+```
+
+> Requires Node.js and npm installed.
+
+---
+
+## Spotify API (Optional)
+
+To fully integrate with Spotify:
+
+1. Register your app at [developer.spotify.com](https://developer.spotify.com)
+2. Obtain your client ID and set up a redirect URI
+3. Add authentication logic (coming soon)
+
+---
+
+
+## Future Improvements
+
+- OAuth authentication with Spotify
+- Save playlists to Spotify
+- Responsive design / mobile view
+- Advanced search (genre, release date)
+- Unit testing and improved error handling
+
+---
+
+## Contributing
+
+Pull requests welcome. For major changes, please open an issue first to discuss what you’d like to change.
+
+---
+
+## License
+
+MIT License — free to use and modify.
+
+---
+
+## Credits
+
+- Built by [Your Name]  
+- Inspired by Codecademy’s [Jammming project](https://www.codecademy.com)
+
