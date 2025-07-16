@@ -1,0 +1,14 @@
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px 0 0 6px;
+    border: 1px solid #71797e;
+    color: white;
+    background-color: rgb(113, 121, 126);
+
+}
+
+ .search-input::placeholder {
+    color: white;
+    opacity: 1;
+ }

@@ -88,9 +88,10 @@ function App() {
 
     const appStyle = {
       display: 'flex',
-      justifyContent: 'space-between',
-      aignItems: 'flex-start',
+      alignItems: 'flex-start',
       gap: '2rem',
+      justifyContent: 'center',
+
     }
 
     const searchStyle = {
@@ -98,7 +99,10 @@ function App() {
       padding: '1rem',
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
       borderRadius: '8px',
-      marginTop: '18px',
+      marginTop: '28px',
+      minHeight: '50vh',
+      marginLeft: '10px'
+      
     }
 
     const playlistStyle = {
@@ -106,8 +110,8 @@ function App() {
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
       padding: '1rem',
       borderRadius: '8px',
-      marginTop: '18px',
-      paddingRight: '10px',
+      marginTop: '28px',
+      marginRight: '10px',
 
 
     }
