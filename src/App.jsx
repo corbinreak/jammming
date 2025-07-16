@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import Playlist from './components/Playlist';
-import './App.css'
+import BackgroundImage from './assets/background-image.png'
+
 
 
 function App() {
@@ -58,28 +59,84 @@ function App() {
      const handleAddTrack = (track) => {
       if (!playlistTracks.find(savedTrack => savedTrack.id === track.id)) {
         setPlaylistTracks(prev => [...prev, track]);
+        setFilteredSongs(prev => prev.filter(song => song.id !== track.id));
       }
      }
 
+    const backgroundStyle = {
+      backgroundImage: `url(${BackgroundImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh',
+      width: '100%',
+      color: 'white',
+
+      
+    }
+
+    const headerStyle = {
+       backgroundColor: 'black',
+       color: 'red',
+       border: '1px solid black',
+       position: 'relative',
+       width: '100%',
+       fontStyle: 'italic',
+       textAlign: 'center',
+       
+    }
+
+    const appStyle = {
+      display: 'flex',
+      justifyContent: 'space-between',
+      aignItems: 'flex-start',
+      gap: '2rem',
+    }
+
+    const searchStyle = {
+      flex: 1,
+      padding: '1rem',
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      borderRadius: '8px',
+      marginTop: '18px',
+    }
+
+    const playlistStyle = {
+      flex: 1,
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      padding: '1rem',
+      borderRadius: '8px',
+      marginTop: '18px',
+      paddingRight: '10px',
+
+
+    }
+
+
    return (
-   <>
-    <div className="App">
+  <div style={backgroundStyle}>
+    <div style={headerStyle}>
       <h1>Jammming</h1>
-      <SearchBar onSearch={handleSearch} />
-      {hasSearched && <SearchResults songs={filteredSongs} onAdd={handleAddTrack}/>}
-      
-      
     </div>
-    <div className="playlist-section">
-      <Playlist 
-       playlistName={playlistName}
-       tracks={playlistTracks}
-       onRemove={handleRemoveTrack}
-       onNameChange={setPlaylistName}
+
+    <div style={appStyle}> 
+      <div style={searchStyle}>
+        <SearchBar onSearch={handleSearch} />
+        {hasSearched && <SearchResults songs={filteredSongs} onAdd={handleAddTrack} />}
+      </div>
+
+      <div style={playlistStyle}>
+        <Playlist 
+          playlistName={playlistName}
+          tracks={playlistTracks}
+          onRemove={handleRemoveTrack}
+          onNameChange={setPlaylistName}
         />
+      </div>
     </div>
-   </> 
-  ); 
+  </div>
+);
+
 
 }
 
