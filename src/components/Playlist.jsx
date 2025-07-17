@@ -26,24 +26,34 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
       const handleChange = (e) => {
         setTempTitle(e.target.value);
       }
-    
+
+      const saveButtonStyle = {
+        backgroundColor: '#ff4c4c',
+        color: 'white',
+        borderRadius: '0 6px 6px 0',
+        padding: '10px 20px',
+        border: 'none',
+        cursor: 'pointer',
+        fontWeight: 'bold',
+      }
 
     return (
         <div>
           {isEditing ? ( 
-           <>
+           <div style={{ display: 'flex'}}>
            <input 
              type="text"
              value={tempTitle ?? ''}
              onChange={handleChange}
-             style={{ fontSize: '1.2rem', padding: '4px' }}
+             style={{ fontSize: '1.2rem', padding: '4px', backgroundColor: 'rgb(113, 121, 126)', color: 'white', boxShadow: 'none', borderTopWidth: 0 , borderLeftWidth: 0 }}
+             className="Playlist-input"
            />
-            <button onClick={handleSaveClick}>Save</button>
-          </>
+            <button style={saveButtonStyle} onClick={handleSaveClick}>Save</button>
+          </div>
           ) : (
             <div style= {{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
             <h2 style={{ margin: 0 }}>{PlaylistName}</h2>
-            <button onClick={handleEditClick} style={{ borderRadius: '20px', padding: '4px 0px 4px 4px', cursor: 'pointer' }}>
+            <button onClick={handleEditClick} style={{ borderRadius: '20px', padding: '4px 0px 4px 4px', cursor: 'pointer',  }}>
                 <FontAwesomeIcon icon={faPen} style={{ marginRight: '6px' }} />
             </button>
           </div>
