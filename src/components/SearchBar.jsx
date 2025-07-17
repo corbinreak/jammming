@@ -13,7 +13,7 @@ function SearchBar({ onSearch }) {
         e.preventDefault();
         if (onSearch) {
         onSearch(searchInput);
-        alert(`Searching For! ${searchInput}`);
+        console.log(`Searching For! ${searchInput}`);
     } else {
         console.warn("No onSearch prop provided to SearchBar");
 

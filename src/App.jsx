@@ -30,7 +30,7 @@ function App() {
 ]
 
   const [playlistTracks, setPlaylistTracks] = useState([]);
-  const [playlistName, setPlaylistName] = useState('My-Playlist');
+  const [PlaylistName, setPlaylistName] = useState('My Playlist');
   const [searchResults, setSearchResults] = useState('');
   const [filteredSongs, setFilteredSongs] = useState(sampleSongs);
   const [hasSearched, setHasSearched] = useState(false);
@@ -131,7 +131,7 @@ function App() {
 
       <div style={playlistStyle}>
         <Playlist 
-          playlistName={playlistName}
+          PlaylistName={PlaylistName}
           tracks={playlistTracks}
           onRemove={handleRemoveTrack}
           onNameChange={setPlaylistName}
