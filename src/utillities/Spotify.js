@@ -1,7 +1,7 @@
 import { generateCodeChallenge, generateCodeVerifier } from "./pkcs";
 
 const clientId = 'ff477fd26c104765bd85f53d400888c4';
-const redirectUri = 'https://65407de4d87e.ngrok-free.app/';
+const redirectUri = 'https://precious-grackle-holy.ngrok-free.app';
 let accessToken;
 let tokenExpirationTime;
 
